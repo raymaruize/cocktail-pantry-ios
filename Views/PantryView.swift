@@ -416,17 +416,30 @@ struct PantryView: View {
 
     private func addCandidatesToPantry(_ found: [Candidate]) {
         var added = 0
-        for id in Set(found.map(\.ingredientId)) {
-            if !viewModel.pantryItems.contains(id) {
-                viewModel.addIngredient(id)
+        var alreadyOwned = 0
+        var skipped = 0
+        var seen: Set<String> = []
+
+        for candidate in found {
+            guard !seen.contains(candidate.ingredientId) else { continue }
+            seen.insert(candidate.ingredientId)
+
+            switch viewModel.addRecognizedIngredient(candidate) {
+            case .added:
                 added += 1
+            case .alreadyOwned:
+                alreadyOwned += 1
+            case .skipped:
+                skipped += 1
             }
         }
 
         if added > 0 {
             statusMessage = "Added \(added) ingredient(s) to Owned pantry."
-        } else if !found.isEmpty {
+        } else if alreadyOwned > 0 {
             statusMessage = "These ingredients are already in your Owned pantry."
+        } else if skipped > 0 {
+            statusMessage = "No valid high-confidence ingredients to add. Try clearer text or manual search."
         }
     }
 }

@@ -128,7 +128,8 @@ public class AIService {
         - Confidence is 0.0 to 1.0
         - Match brand names, spirit types, mixers, juices
         - Extract the ingredient ID from the list exactly as shown
-        - Return empty array [] if no good matches found
+        - If a snippet is a real alcohol/mixer brand but not in the list, create a NEW normalized id (lowercase_with_underscores), e.g. malibu, baileys, kahlua
+        - Return empty array [] only if text is not a beverage ingredient
         - Do not return any text besides the JSON array
         
         Available ingredients:
@@ -245,9 +246,21 @@ public class AIService {
                             )
                         }
                     }
-                    
-                    print("[AIService] Skipping unknown ingredient: \(item.ingredientId)")
-                    return nil
+
+                    // If still unknown, pass through a sanitized ID so Pantry can optionally create a custom ingredient.
+                    let unknownId = Self.sanitizeCustomId(item.ingredientId, fallback: item.text)
+                    guard !unknownId.isEmpty else {
+                        print("[AIService] Skipping unknown ingredient: \(item.ingredientId)")
+                        return nil
+                    }
+
+                    print("[AIService] Passing unknown ingredient for custom add: \(unknownId)")
+                    return Candidate(
+                        text: item.text,
+                        ingredientId: unknownId,
+                        confidence: max(0, min(1, item.confidence * 0.85)),
+                        reason: "AI: \(item.reason) [new ingredient candidate]"
+                    )
                 }
                 print("[AIService] Returning \(candidates.count) valid candidates")
                 completion(.success(candidates))
@@ -263,6 +276,16 @@ public class AIService {
             return String(text[start...end])
         }
         return text
+    }
+
+    private static func sanitizeCustomId(_ raw: String, fallback: String) -> String {
+        let source = raw.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? fallback : raw
+        let lowered = source.lowercased().trimmingCharacters(in: .whitespacesAndNewlines)
+        let normalized = lowered
+            .replacingOccurrences(of: "[^a-z0-9]+", with: "_", options: .regularExpression)
+            .replacingOccurrences(of: "_+", with: "_", options: .regularExpression)
+            .trimmingCharacters(in: CharacterSet(charactersIn: "_"))
+        return normalized
     }
 }
 
