@@ -122,12 +122,14 @@ public class AIService {
         Return STRICT JSON ONLY, as an array of matches.
         
         For each match, return:
-        {"ingredientId":"ID_STRING","confidence":0.95,"reason":"why this is a match","text":"original_text"}
+        {"ingredientId":"ID_STRING","confidence":0.95,"reason":"why this is a match","text":"original_text","baseIngredientId":"canonical_id_or_null"}
         
         Rules:
         - Confidence is 0.0 to 1.0
-        - Match brand names, spirit types, mixers, juices
-        - Extract the ingredient ID from the list exactly as shown
+        - Match specific brand names first (e.g., Cointreau, Grey Goose, Malibu)
+        - Keep brand-specific items distinct from generic categories when possible
+        - If ingredientId is a specific brand/custom item, set baseIngredientId to canonical parent when known (e.g., triple_sec, vodka)
+        - Extract known ingredient IDs from the list exactly as shown when available
         - If a snippet is a real alcohol/mixer brand but not in the list, create a NEW normalized id (lowercase_with_underscores), e.g. malibu, baileys, kahlua
         - Return empty array [] only if text is not a beverage ingredient
         - Do not return any text besides the JSON array
@@ -215,22 +217,24 @@ public class AIService {
                 let candidates = parsed.compactMap { item -> Candidate? in
                     // Try exact match first
                     if workingDictionary[item.ingredientId] != nil {
+                        let baseTag = item.baseIngredientId.map { " [base:\($0)]" } ?? ""
                         return Candidate(
                             text: item.text,
                             ingredientId: item.ingredientId,
                             confidence: max(0, min(1, item.confidence)),
-                            reason: "AI: \(item.reason)"
+                            reason: "AI: \(item.reason)\(baseTag)"
                         )
                     }
                     
                     // Try case-insensitive match
                     let normalized = item.ingredientId.lowercased().replacingOccurrences(of: " ", with: "_")
                     if workingDictionary[normalized] != nil {
+                        let baseTag = item.baseIngredientId.map { " [base:\($0)]" } ?? ""
                         return Candidate(
                             text: item.text,
                             ingredientId: normalized,
                             confidence: max(0, min(1, item.confidence)),
-                            reason: "AI: \(item.reason)"
+                            reason: "AI: \(item.reason)\(baseTag)"
                         )
                     }
                     
@@ -255,11 +259,12 @@ public class AIService {
                     }
 
                     print("[AIService] Passing unknown ingredient for custom add: \(unknownId)")
+                    let baseTag = item.baseIngredientId.map { " [base:\($0)]" } ?? ""
                     return Candidate(
                         text: item.text,
                         ingredientId: unknownId,
                         confidence: max(0, min(1, item.confidence * 0.85)),
-                        reason: "AI: \(item.reason) [new ingredient candidate]"
+                        reason: "AI: \(item.reason) [new ingredient candidate]\(baseTag)"
                     )
                 }
                 print("[AIService] Returning \(candidates.count) valid candidates")
@@ -304,4 +309,5 @@ private struct AICandidatePayload: Decodable {
     let confidence: Double
     let reason: String
     let text: String
+    let baseIngredientId: String?
 }

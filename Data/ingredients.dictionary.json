@@ -1,9 +1,12 @@
 [
   { "id": "vodka", "displayName": "Vodka", "category": "spirit", "aliases": ["vodka"] },
+  { "id": "grey_goose", "displayName": "Grey Goose", "category": "spirit", "aliases": ["grey goose", "gray goose"], "satisfies": ["vodka"] },
   { "id": "red_wine", "displayName": "Red Wine", "category": "wine", "aliases": ["red wine", "table wine", "vino rosso"] },
   { "id": "cabernet_sauvignon", "displayName": "Cabernet Sauvignon", "category": "wine", "aliases": ["cabernet sauvignon", "cabernet", "sauvignon", "klipsun", "don melchor", "caymus", "cakebread", "jordan", "stags leap", "artemis"] },
   { "id": "tequila", "displayName": "Tequila", "category": "spirit", "aliases": ["tequila"] },
-  { "id": "triple_sec", "displayName": "Triple Sec", "category": "liqueur", "aliases": ["triple sec", "cointreau", "curacao"] },
+  { "id": "triple_sec", "displayName": "Triple Sec", "category": "liqueur", "aliases": ["triple sec", "orange liqueur"] },
+  { "id": "cointreau", "displayName": "Cointreau", "category": "liqueur", "aliases": ["cointreau"], "satisfies": ["triple_sec"] },
+  { "id": "bols_blue", "displayName": "Bols Blue", "category": "liqueur", "aliases": ["bols blue", "bols blue curacao", "blue curacao"], "satisfies": ["triple_sec"] },
   { "id": "lime_juice", "displayName": "Lime Juice", "category": "mixer", "aliases": ["lime juice", "fresh lime juice", "lime"] },
   { "id": "sugar", "displayName": "Sugar", "category": "mixer", "aliases": ["sugar", "cane sugar", "white sugar"] },
   { "id": "white_rum", "displayName": "White Rum", "category": "spirit", "aliases": ["white rum", "light rum", "bacardi", "rum"] },

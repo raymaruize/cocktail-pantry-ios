@@ -100,6 +100,16 @@ public class PantryViewModel: ObservableObject {
     }
 
     public func upsertCustomIngredient(displayName: String, suggestedId: String? = nil, aliases: [String] = []) -> String {
+        return upsertCustomIngredient(displayName: displayName, suggestedId: suggestedId, aliases: aliases, category: "custom", satisfies: nil)
+    }
+
+    public func upsertCustomIngredient(
+        displayName: String,
+        suggestedId: String? = nil,
+        aliases: [String] = [],
+        category: String,
+        satisfies: [String]?
+    ) -> String {
         let base = (suggestedId?.isEmpty == false ? suggestedId! : displayName)
         let normalized = normalizeId(base)
         guard !normalized.isEmpty else {
@@ -117,8 +127,9 @@ public class PantryViewModel: ObservableObject {
         let ingredient = Ingredient(
             id: normalized,
             displayName: displayName,
-            category: "custom",
-            aliases: mergedAliases
+            category: category,
+            aliases: mergedAliases,
+            satisfies: satisfies
         )
 
         customIngredients[normalized] = ingredient
@@ -138,10 +149,17 @@ public class PantryViewModel: ObservableObject {
                 return .skipped(candidate.text)
             }
             let cleanedName = prettifyName(from: candidate.text.isEmpty ? candidate.ingredientId : candidate.text)
+
+            let inferredBase = inferBaseIngredientId(from: candidate)
+            let inferredCategory = inferredBase.flatMap { ingredientsDict[$0]?.category } ?? "custom"
+            let satisfies = inferredBase.map { [$0] }
+
             ingredientId = upsertCustomIngredient(
                 displayName: cleanedName,
                 suggestedId: candidate.ingredientId,
-                aliases: [candidate.text, candidate.ingredientId]
+                aliases: [candidate.text, candidate.ingredientId],
+                category: inferredCategory,
+                satisfies: satisfies
             )
         }
 
@@ -154,7 +172,7 @@ public class PantryViewModel: ObservableObject {
     }
 
     public func recommendationResults(missingThreshold: Int = 2) -> [MatchResult] {
-        let service = RecommendationService(pantryIngredientIds: pantryItems, cocktails: cocktails)
+        let service = RecommendationService(pantryIngredientIds: pantryItems, cocktails: cocktails, ingredients: ingredientsDict)
         return service.matchAll(missingThreshold: missingThreshold)
     }
 
@@ -188,5 +206,29 @@ public class PantryViewModel: ObservableObject {
             .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
         guard !cleaned.isEmpty else { return raw }
         return cleaned.capitalized
+    }
+
+    private func inferBaseIngredientId(from candidate: Candidate) -> String? {
+        if let explicitBase = extractBaseId(from: candidate.reason), ingredientsDict[explicitBase] != nil {
+            return explicitBase
+        }
+
+        let normalizer = NormalizationService(dictionary: ingredientsDict)
+        let probes = [candidate.text, candidate.ingredientId, candidate.reason].filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+        let guessed = normalizer.candidates(for: probes, maxCandidates: 1).first
+        return guessed?.ingredientId
+    }
+
+    private func extractBaseId(from reason: String) -> String? {
+        guard let regex = try? NSRegularExpression(pattern: "\\[base:([a-z0-9_\\-]+)\\]", options: .caseInsensitive) else {
+            return nil
+        }
+        let ns = reason as NSString
+        let range = NSRange(location: 0, length: ns.length)
+        guard let match = regex.firstMatch(in: reason, options: [], range: range), match.numberOfRanges > 1 else {
+            return nil
+        }
+        let value = ns.substring(with: match.range(at: 1)).lowercased()
+        return value
     }
 }
