@@ -1,4 +1,4 @@
-# REFLECTION (DRAFT — REWRITE IN YOUR OWN WORDS)
+# REFLECTION 
 
 > Course policy says this reflection must be written by you without AI.
 > Use this file as a scaffold, then replace all content with your own writing before submission.
