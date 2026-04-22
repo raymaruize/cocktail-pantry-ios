@@ -1,0 +1,255 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* App/CocktailPantryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* App/CocktailPantryApp.swift */; };
+		A10000000000000000000002 /* Models/Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* Models/Ingredient.swift */; };
+		A10000000000000000000003 /* Models/Cocktail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* Models/Cocktail.swift */; };
+		A10000000000000000000004 /* Models/PantryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* Models/PantryItem.swift */; };
+		A10000000000000000000005 /* Services/RecommendationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000005 /* Services/RecommendationService.swift */; };
+		A10000000000000000000006 /* Services/ReminderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000006 /* Services/ReminderService.swift */; };
+		A10000000000000000000007 /* Services/OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000007 /* Services/OCRService.swift */; };
+		A10000000000000000000008 /* Services/AIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000008 /* Services/AIService.swift */; };
+		A10000000000000000000009 /* Services/NormalizationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* Services/NormalizationService.swift */; };
+		A10000000000000000000010 /* Utilities/DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* Utilities/DataLoader.swift */; };
+		A10000000000000000000011 /* ViewModels/PantryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* ViewModels/PantryViewModel.swift */; };
+		A10000000000000000000012 /* Views/PantryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* Views/PantryView.swift */; };
+		A10000000000000000000013 /* Views/DiscoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* Views/DiscoverView.swift */; };
+		A10000000000000000000014 /* Views/ShoppingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000014 /* Views/ShoppingView.swift */; };
+		A10000000000000000000015 /* Views/ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000015 /* Views/ImagePicker.swift */; };
+		A10000000000000000000016 /* Views/SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000016 /* Views/SettingsView.swift */; };
+		A10000000000000000000017 /* Data/cocktails.seed.json in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000017 /* Data/cocktails.seed.json */; };
+		A10000000000000000000018 /* Data/ingredients.dictionary.json in Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000018 /* Data/ingredients.dictionary.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* App/CocktailPantryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App/CocktailPantryApp.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000002 /* Models/Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Ingredient.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000003 /* Models/Cocktail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/Cocktail.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000004 /* Models/PantryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models/PantryItem.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000005 /* Services/RecommendationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/RecommendationService.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000006 /* Services/ReminderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/ReminderService.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000007 /* Services/OCRService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/OCRService.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000008 /* Services/AIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/AIService.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000009 /* Services/NormalizationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services/NormalizationService.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000010 /* Utilities/DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities/DataLoader.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000011 /* ViewModels/PantryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels/PantryViewModel.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000012 /* Views/PantryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/PantryView.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000013 /* Views/DiscoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/DiscoverView.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000014 /* Views/ShoppingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ShoppingView.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000015 /* Views/ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/ImagePicker.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000016 /* Views/SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views/SettingsView.swift; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000017 /* Data/cocktails.seed.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data/cocktails.seed.json; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000018 /* Data/ingredients.dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Data/ingredients.dictionary.json; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000019 /* App/Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = App/Info.plist; sourceTree = SOURCE_ROOT; };
+		A20000000000000000000020 /* CocktailPantry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = CocktailPantry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000001 /* App/CocktailPantryApp.swift */,
+				A20000000000000000000002 /* Models/Ingredient.swift */,
+				A20000000000000000000003 /* Models/Cocktail.swift */,
+				A20000000000000000000004 /* Models/PantryItem.swift */,
+				A20000000000000000000005 /* Services/RecommendationService.swift */,
+				A20000000000000000000006 /* Services/ReminderService.swift */,
+				A20000000000000000000007 /* Services/OCRService.swift */,
+				A20000000000000000000008 /* Services/AIService.swift */,
+				A20000000000000000000009 /* Services/NormalizationService.swift */,
+				A20000000000000000000010 /* Utilities/DataLoader.swift */,
+				A20000000000000000000011 /* ViewModels/PantryViewModel.swift */,
+				A20000000000000000000012 /* Views/PantryView.swift */,
+				A20000000000000000000013 /* Views/DiscoverView.swift */,
+				A20000000000000000000014 /* Views/ShoppingView.swift */,
+				A20000000000000000000015 /* Views/ImagePicker.swift */,
+				A20000000000000000000016 /* Views/SettingsView.swift */,
+				A20000000000000000000017 /* Data/cocktails.seed.json */,
+				A20000000000000000000018 /* Data/ingredients.dictionary.json */,
+				A20000000000000000000019 /* App/Info.plist */,
+				A40000000000000000000002 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A40000000000000000000002 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A20000000000000000000020 /* CocktailPantry.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* CocktailPantry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A70000000000000000000001 /* Build configuration list for PBXNativeTarget "CocktailPantry" */;
+			buildPhases = (
+				A60000000000000000000001 /* Sources */,
+				A30000000000000000000001 /* Frameworks */,
+				A60000000000000000000002 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CocktailPantry;
+			productName = CocktailPantry;
+			productReference = A20000000000000000000020 /* CocktailPantry.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A80000000000000000000001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1500;
+			};
+			buildConfigurationList = A70000000000000000000002 /* Build configuration list for PBXProject "CocktailPantryFixed" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A40000000000000000000001;
+			productRefGroup = A40000000000000000000002 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A50000000000000000000001 /* CocktailPantry */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A60000000000000000000002 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000017 /* Data/cocktails.seed.json in Resources */,
+				A10000000000000000000018 /* Data/ingredients.dictionary.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A60000000000000000000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A10000000000000000000001 /* App/CocktailPantryApp.swift in Sources */,
+				A10000000000000000000002 /* Models/Ingredient.swift in Sources */,
+				A10000000000000000000003 /* Models/Cocktail.swift in Sources */,
+				A10000000000000000000004 /* Models/PantryItem.swift in Sources */,
+				A10000000000000000000005 /* Services/RecommendationService.swift in Sources */,
+				A10000000000000000000006 /* Services/ReminderService.swift in Sources */,
+				A10000000000000000000007 /* Services/OCRService.swift in Sources */,
+				A10000000000000000000008 /* Services/AIService.swift in Sources */,
+				A10000000000000000000009 /* Services/NormalizationService.swift in Sources */,
+				A10000000000000000000010 /* Utilities/DataLoader.swift in Sources */,
+				A10000000000000000000011 /* ViewModels/PantryViewModel.swift in Sources */,
+				A10000000000000000000012 /* Views/PantryView.swift in Sources */,
+				A10000000000000000000013 /* Views/DiscoverView.swift in Sources */,
+				A10000000000000000000014 /* Views/ShoppingView.swift in Sources */,
+				A10000000000000000000015 /* Views/ImagePicker.swift in Sources */,
+				A10000000000000000000016 /* Views/SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A90000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MAJ4DZ6GDZ;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A90000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = MAJ4DZ6GDZ;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A90000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A90000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A70000000000000000000001 /* Build configuration list for PBXNativeTarget "CocktailPantry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000001 /* Debug */,
+				A90000000000000000000002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A70000000000000000000002 /* Build configuration list for PBXProject "CocktailPantryFixed" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A90000000000000000000003 /* Debug */,
+				A90000000000000000000004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A80000000000000000000001 /* Project object */;
+}

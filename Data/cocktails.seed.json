@@ -1,0 +1,109 @@
+[
+  {
+    "id": "margarita",
+    "name": "Margarita",
+    "ingredients": [
+      { "ingredientId": "tequila", "amount": "2 oz", "optional": false },
+      { "ingredientId": "triple_sec", "amount": "1 oz", "optional": false },
+      { "ingredientId": "lime_juice", "amount": "0.75 oz", "optional": false }
+    ],
+    "method": "shake",
+    "ice": "none",
+    "glassware": "coupe",
+    "garnish": ["lime_wheel"],
+    "flavorTags": ["citrusy", "bright"],
+    "popularityScore": 95
+  },
+  {
+    "id": "daiquiri",
+    "name": "Daiquiri",
+    "ingredients": [
+      { "ingredientId": "white_rum", "amount": "2 oz", "optional": false },
+      { "ingredientId": "lime_juice", "amount": "0.75 oz", "optional": false },
+      { "ingredientId": "simple_syrup", "amount": "0.75 oz", "optional": false }
+    ],
+    "method": "shake",
+    "ice": "none",
+    "glassware": "coupe",
+    "garnish": ["lime_wheel"],
+    "flavorTags": ["citrusy", "sweet"],
+    "popularityScore": 88
+  },
+  {
+    "id": "negroni",
+    "name": "Negroni",
+    "ingredients": [
+      { "ingredientId": "gin", "amount": "1 oz", "optional": false },
+      { "ingredientId": "campari", "amount": "1 oz", "optional": false },
+      { "ingredientId": "sweet_vermouth", "amount": "1 oz", "optional": false }
+    ],
+    "method": "stir",
+    "ice": "large_cube",
+    "glassware": "rocks",
+    "garnish": ["orange_peel"],
+    "flavorTags": ["bitter", "spirit-forward"],
+    "popularityScore": 90
+  },
+  {
+    "id": "old_fashioned",
+    "name": "Old Fashioned",
+    "ingredients": [
+      { "ingredientId": "bourbon", "amount": "2 oz", "optional": false },
+      { "ingredientId": "sugar", "amount": "0.25 tsp", "optional": false },
+      { "ingredientId": "angostura_bitters", "amount": "2 dashes", "optional": false }
+    ],
+    "method": "stir",
+    "ice": "large_cube",
+    "glassware": "rocks",
+    "garnish": ["orange_peel"],
+    "flavorTags": ["spirit-forward", "slightly-sweet"],
+    "popularityScore": 85
+  },
+  {
+    "id": "mojito",
+    "name": "Mojito",
+    "ingredients": [
+      { "ingredientId": "white_rum", "amount": "2 oz", "optional": false },
+      { "ingredientId": "sugar", "amount": "0.75 oz", "optional": false },
+      { "ingredientId": "lime_juice", "amount": "0.75 oz", "optional": false },
+      { "ingredientId": "soda_water", "amount": "top", "optional": false },
+      { "ingredientId": "mint_leaves", "amount": "6", "optional": false }
+    ],
+    "method": "muddle",
+    "ice": "cubed",
+    "glassware": "highball",
+    "garnish": ["mint_sprig"],
+    "flavorTags": ["fresh", "minty"],
+    "popularityScore": 82
+  },
+  {
+    "id": "new_york_sour",
+    "name": "New York Sour",
+    "ingredients": [
+      { "ingredientId": "bourbon", "amount": "2 oz", "optional": false },
+      { "ingredientId": "lime_juice", "amount": "0.75 oz", "optional": false },
+      { "ingredientId": "simple_syrup", "amount": "0.5 oz", "optional": false },
+      { "ingredientId": "red_wine", "amount": "0.5 oz float", "optional": false }
+    ],
+    "method": "shake",
+    "ice": "none",
+    "glassware": "coupe",
+    "garnish": ["orange_peel"],
+    "flavorTags": ["wine", "citrusy", "bold"],
+    "popularityScore": 74
+  },
+  {
+    "id": "red_wine_spritz",
+    "name": "Red Wine Spritz",
+    "ingredients": [
+      { "ingredientId": "red_wine", "amount": "3 oz", "optional": false },
+      { "ingredientId": "soda_water", "amount": "2 oz", "optional": false }
+    ],
+    "method": "build",
+    "ice": "cubed",
+    "glassware": "wine",
+    "garnish": ["orange_peel"],
+    "flavorTags": ["wine", "light", "refreshing"],
+    "popularityScore": 60
+  }
+]

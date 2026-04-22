@@ -1,0 +1,22 @@
+[
+  { "id": "vodka", "displayName": "Vodka", "category": "spirit", "aliases": ["vodka"] },
+  { "id": "red_wine", "displayName": "Red Wine", "category": "wine", "aliases": ["red wine", "table wine", "vino rosso"] },
+  { "id": "cabernet_sauvignon", "displayName": "Cabernet Sauvignon", "category": "wine", "aliases": ["cabernet sauvignon", "cabernet", "sauvignon", "klipsun", "don melchor", "caymus", "cakebread", "jordan", "stags leap", "artemis"] },
+  { "id": "tequila", "displayName": "Tequila", "category": "spirit", "aliases": ["tequila"] },
+  { "id": "triple_sec", "displayName": "Triple Sec", "category": "liqueur", "aliases": ["triple sec", "cointreau", "curacao"] },
+  { "id": "lime_juice", "displayName": "Lime Juice", "category": "mixer", "aliases": ["lime juice", "fresh lime juice", "lime"] },
+  { "id": "sugar", "displayName": "Sugar", "category": "mixer", "aliases": ["sugar", "cane sugar", "white sugar"] },
+  { "id": "white_rum", "displayName": "White Rum", "category": "spirit", "aliases": ["white rum", "light rum", "bacardi", "rum"] },
+  { "id": "simple_syrup", "displayName": "Simple Syrup", "category": "mixer", "aliases": ["simple syrup", "sugar syrup", "sugar"] },
+  { "id": "gin", "displayName": "Gin", "category": "spirit", "aliases": ["gin"] },
+  { "id": "campari", "displayName": "Campari", "category": "liqueur", "aliases": ["campari"] },
+  { "id": "sweet_vermouth", "displayName": "Sweet Vermouth", "category": "liqueur", "aliases": ["sweet vermouth", "rosso vermouth"] },
+  { "id": "bourbon", "displayName": "Bourbon", "category": "spirit", "aliases": ["bourbon", "whiskey", "whisky"] },
+  { "id": "angostura_bitters", "displayName": "Angostura Bitters", "category": "flavoring", "aliases": ["angostura", "bitters"] },
+  { "id": "soda_water", "displayName": "Soda Water", "category": "mixer", "aliases": ["soda water", "club soda", "soda"] },
+  { "id": "mint_leaves", "displayName": "Mint Leaves", "category": "fresh", "aliases": ["mint", "mint leaves"] },
+  { "id": "salt", "displayName": "Salt", "category": "garnish", "aliases": ["salt"] },
+  { "id": "lime_wheel", "displayName": "Lime Wheel", "category": "garnish", "aliases": ["lime wheel", "lime slice"] },
+  { "id": "orange_peel", "displayName": "Orange Peel", "category": "garnish", "aliases": ["orange peel", "orange twist"] },
+  { "id": "mint_sprig", "displayName": "Mint Sprig", "category": "garnish", "aliases": ["mint sprig"] }
+]

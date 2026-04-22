@@ -1,0 +1,297 @@
+// !@$*UTF8*$!
+{
+	objects = {
+		1D6058900D05DD3D006BFB54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Your Organization";
+			};
+			buildConfigurationList = 1D6058910D05DD3D006BFB54 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D6058920D05DD3D006BFB54;
+			productRefGroup = 1D6058930D05DD3D006BFB54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058940D05DD3D006BFB54 /* CocktailPantry */,
+			);
+		};
+
+		1D6058910D05DD3D006BFB54 /* Build configuration list for PBXProject */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058950D05DD3D006BFB54 /* Debug */,
+				1D6058960D05DD3D006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+
+		1D6058950D05DD3D006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+
+		1D6058960D05DD3D006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+
+		1D6058920D05DD3D006BFB54 = {
+			isa = PBXGroup;
+			children = (
+				1D6058970D05DD3D006BFB54 /* App */,
+				1D6058980D05DD3D006BFB54 /* Models */,
+				1D6058990D05DD3D006BFB54 /* Services */,
+				1D60589A0D05DD3D006BFB54 /* Data */,
+			);
+			sourceTree = "<group>";
+		};
+
+		1D6058930D05DD3D006BFB54 = {
+			isa = PBXGroup;
+			children = (
+				1D60589B0D05DD3D006BFB54 /* CocktailPantry.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+
+		1D6058970D05DD3D006BFB54 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1D60589C0D05DD3D006BFB54 /* CocktailPantryApp.swift */,
+				1D60589D0D05DD3D006BFB54 /* Info.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+
+		1D6058980D05DD3D006BFB54 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D60589E0D05DD3D006BFB54 /* Ingredient.swift */,
+				1D60589F0D05DD3D006BFB54 /* Cocktail.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+
+		1D6058990D05DD3D006BFB54 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058A00D05DD3D006BFB54 /* RecommendationService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+
+		1D60589A0D05DD3D006BFB54 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058A10D05DD3D006BFB54 /* cocktails.seed.json */,
+				1D6058A20D05DD3D006BFB54 /* ingredients.dictionary.json */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+
+		1D60589C0D05DD3D006BFB54 /* CocktailPantryApp.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			name = "CocktailPantryApp.swift";
+			path = App/CocktailPantryApp.swift;
+			sourceTree = "<group>";
+		};
+
+		1D60589D0D05DD3D006BFB54 /* Info.plist */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = Info.plist;
+			path = App/Info.plist;
+			sourceTree = "<group>";
+		};
+
+		1D60589E0D05DD3D006BFB54 /* Ingredient.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			name = Ingredient.swift;
+			path = Models/Ingredient.swift;
+			sourceTree = "<group>";
+		};
+
+		1D60589F0D05DD3D006BFB54 /* Cocktail.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			name = Cocktail.swift;
+			path = Models/Cocktail.swift;
+			sourceTree = "<group>";
+		};
+
+		1D6058A00D05DD3D006BFB54 /* RecommendationService.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			name = RecommendationService.swift;
+			path = Services/RecommendationService.swift;
+			sourceTree = "<group>";
+		};
+
+		1D6058A10D05DD3D006BFB54 /* cocktails.seed.json */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = cocktails.seed.json;
+			path = Data/cocktails.seed.json;
+			sourceTree = "<group>";
+		};
+
+		1D6058A20D05DD3D006BFB54 /* ingredients.dictionary.json */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text;
+			name = ingredients.dictionary.json;
+			path = Data/ingredients.dictionary.json;
+			sourceTree = "<group>";
+		};
+
+		1D6058940D05DD3D006BFB54 /* CocktailPantry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058A30D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "CocktailPantry" */;
+			buildPhases = (
+				1D6058A40D05DD3D006BFB54 /* Sources */,
+				1D6058A50D05DD3D006BFB54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			hostedPlatformBuildSettings = {
+			};
+			name = "CocktailPantry";
+			productName = "CocktailPantry";
+			productReference = 1D60589B0D05DD3D006BFB54 /* CocktailPantry.app */;
+			productType = "com.apple.product-type.application";
+		};
+
+		1D60589B0D05DD3D006BFB54 /* CocktailPantry.app */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = "wrapper.application";
+			name = CocktailPantry.app;
+			path = "";
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+
+		1D6058A30D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "CocktailPantry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058A60D05DD3D006BFB54 /* Debug */,
+				1D6058A70D05DD3D006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+
+		1D6058A60D05DD3D006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+
+		1D6058A70D05DD3D006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = App/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.CocktailPantry;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+
+		1D6058A40D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6058A80D05DD3D006BFB54,
+				1D6058A90D05DD3D006BFB54,
+				1D6058AA0D05DD3D006BFB54,
+				1D6058AB0D05DD3D006BFB54,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		1D6058A50D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6058AC0D05DD3D006BFB54,
+				1D6058AD0D05DD3D006BFB54,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+
+		1D6058A80D05DD3D006BFB54 /* CocktailPantryApp.swift in Sources */ = {
+			isa = PBXBuildFile;
+			fileRef = 1D60589C0D05DD3D006BFB54 /* CocktailPantryApp.swift */;
+		};
+
+		1D6058A90D05DD3D006BFB54 /* Ingredient.swift in Sources */ = {
+			isa = PBXBuildFile;
+			fileRef = 1D60589E0D05DD3D006BFB54 /* Ingredient.swift */;
+		};
+
+		1D6058AA0D05DD3D006BFB54 /* Cocktail.swift in Sources */ = {
+			isa = PBXBuildFile;
+			fileRef = 1D60589F0D05DD3D006BFB54 /* Cocktail.swift */;
+		};
+
+		1D6058AB0D05DD3D006BFB54 /* RecommendationService.swift in Sources */ = {
+			isa = PBXBuildFile;
+			fileRef = 1D6058A00D05DD3D006BFB54 /* RecommendationService.swift */;
+		};
+
+		1D6058AC0D05DD3D006BFB54 /* cocktails.seed.json in Resources */ = {
+			isa = PBXBuildFile;
+			fileRef = 1D6058A10D05DD3D006BFB54 /* cocktails.seed.json */;
+		};
+
+		1D6058AD0D05DD3D006BFB54 /* ingredients.dictionary.json in Resources */ = {
+			isa = PBXBuildFile;
+			fileRef = 1D6058A20D05DD3D006BFB54 /* ingredients.dictionary.json */;
+		};
+	};
+	rootObject = 1D6058900D05DD3D006BFB54 /* Project object */;
+}

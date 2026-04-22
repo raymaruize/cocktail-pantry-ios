@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Local tooling
+.kiro/
+.vscode/
+
+# Xcode / Swift
+DerivedData/
+build/
+*.xcuserstate
+*.xcworkspace/xcuserdata/
+*.xcuserdatad/
+
+# SwiftPM
+.swiftpm/
+.build/
+
+# Secrets / env
+.env
+.env.*
+*.key
+
+# Misc
+*.log

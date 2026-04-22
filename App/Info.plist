@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.example.CocktailPantry</string>
+	<key>CFBundleName</key>
+	<string>CocktailPantry</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchScreen</key>
+	<dict/>
+	<key>NSCameraUsageDescription</key>
+	<string>Cocktail Pantry uses your camera to scan bottle labels for OCR suggestions.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Cocktail Pantry accesses your photo library to scan bottle images.</string>
+	<key>NSRemindersUsageDescription</key>
+	<string>Cocktail Pantry writes missing ingredients to your Reminders shopping list.</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+</dict>
+</plist>
